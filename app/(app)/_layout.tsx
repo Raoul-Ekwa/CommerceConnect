@@ -1,14 +1,33 @@
-import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
+import { StyleSheet, Text, View } from 'react-native';
+import React from 'react';
+import { Redirect } from 'expo-router';
 
-const appLayout = () => {
+const AppLayout = () => {
+  const isLogged = false;
+
+  if(!isLogged) {
+    return <Redirect href="/Login" />;  
+  }
+  
   return (
-    <View>
-      <Text>Appeller depuis (app)</Text>
+    <View style={styles.container}>
+      <Text style={styles.title}>Appelé depuis (app)</Text>
     </View>
-  )
-}
+  );
+};
 
-export default appLayout
+export default AppLayout;
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  title: {
+    fontSize: 24,
+    fontWeight: 'bold',
+    color: '#333',
+  },
+});

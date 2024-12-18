@@ -1,14 +1,14 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 
-const details = () => {
+const TextInputIcon = () => {
   return (
     <View>
-      <Text>details</Text>
+      <Text>Ma zone de saisie</Text>
     </View>
   )
 }
 
-export default details
+export default TextInputIcon
 
 const styles = StyleSheet.create({})

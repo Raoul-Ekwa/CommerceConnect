@@ -1,0 +1,4 @@
+export const APP_DIMENSIONS = {
+    DEFAULT_PADDING: 25,
+    LOGO_WIDTH_HEIGHT: 150,
+}
